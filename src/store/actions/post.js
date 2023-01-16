@@ -1,5 +1,5 @@
+import { HEADERS } from "../constants/header";
 import {
-  HEADERS,
   POSTERROR,
   POSTREQUEST,
   POSTSUCCESS,
