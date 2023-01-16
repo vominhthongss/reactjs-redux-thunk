@@ -1,3 +1,5 @@
+import { POSTERROR, POSTREQUEST, POSTSUCCESS } from "../constants/post";
+
 const initialState = {
   requesting: false,
   success: false,
@@ -6,16 +8,16 @@ const initialState = {
 };
 const postReducers = (state = initialState, action) => {
   switch (action.type) {
-    case "POSTREQUEST":
+    case POSTREQUEST:
       return { ...state, requesting: true };
-    case "POSTSUCCESS":
+    case POSTSUCCESS:
       return {
         ...state,
         requesting: false,
         success: true,
         data: action.data,
       };
-    case "POSTERROR":
+    case POSTERROR:
       return { ...state, requesting: false, message: action.message };
 
     default:
