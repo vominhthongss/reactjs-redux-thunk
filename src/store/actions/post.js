@@ -6,6 +6,10 @@ import {
   URLGETPOSTS,
 } from "../constants/post";
 
+/**
+ * This function is an asynchronous function that takes a dispatch function as an argument and returns
+ * a function that dispatches an action to the store.
+ */
 const loadPost = () => async (dispatch) => {
   try {
     dispatch({ type: POSTREQUEST });
